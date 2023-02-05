@@ -1,0 +1,19 @@
+{
+    "manifest_version": 2,
+
+    "name": "Read Aloud",
+    "description": "Reads selected text aloud",
+    "version": "1.0",
+    "permissions": [
+        "activeTab",
+        "contextMenus"
+    ],
+    "background": {
+        "scripts": ["background.js"]
+    },
+    "content_scripts": [ {
+        "matches": ["http://*/*", "https://*/*"],
+        "js": ["background.js"]
+      } ]
+    
+}
